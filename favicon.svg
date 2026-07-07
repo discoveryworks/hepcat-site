@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- Saul Bass-style hepcat: flat cut-paper shapes, jagged hand-cut edges -->
+  <!-- field -->
+  <rect width="1024" height="1024" fill="#6D28D9"/>
+  <!-- offset backing blob, darker purple, off-register like a misprint -->
+  <path d="M 190 330 L 480 250 L 800 320 L 880 640 L 780 940 L 420 970 L 170 820 L 130 540 Z"
+        fill="#4C1D95"/>
+  <!-- head: black, jagged oval -->
+  <path d="M 330 400 L 470 340 L 620 355 L 700 450 L 720 610 L 680 780 L 560 880 L 430 870 L 330 760 L 300 570 Z"
+        fill="#0A0A0A"/>
+  <!-- beret: lavender, tilted, sitting heavy on the left -->
+  <path d="M 240 375 L 350 280 L 540 235 L 690 285 L 715 360 L 560 330 L 380 350 L 265 405 Z"
+        fill="#C4B5FD"/>
+  <!-- beret stem -->
+  <path d="M 470 240 L 505 195 L 535 235 L 500 260 Z" fill="#C4B5FD"/>
+  <!-- sunglasses: one wraparound white shape, tilted, with big dark lenses -->
+  <path d="M 322 505 L 700 468 L 706 528 L 688 610 L 552 622 L 540 560 L 492 566 L 486 628 L 352 640 L 326 560 Z"
+        fill="#F5F3FF"/>
+  <!-- lenses: near-black purple, big and opaque -->
+  <path d="M 360 530 L 480 518 L 472 594 L 368 604 Z" fill="#1E0A4A"/>
+  <path d="M 548 512 L 668 500 L 660 578 L 556 588 Z" fill="#1E0A4A"/>
+  <!-- goatee: lavender jagged patch on the chin -->
+  <path d="M 505 770 L 575 760 L 590 800 L 560 862 L 520 868 L 495 815 Z" fill="#C4B5FD"/>
+  <!-- mouth: thin sly line -->
+  <path d="M 470 715 L 590 705 L 592 725 L 472 735 Z" fill="#6D28D9"/>
+  <!-- jazzy eighth-note, hand-cut, nudged inside the corner mask -->
+  <path d="M 750 170 L 780 162 L 798 395 L 760 402 Z" fill="#F5F3FF"/>
+  <path d="M 722 380 L 790 362 L 808 428 L 745 450 Z" fill="#F5F3FF"/>
+  <path d="M 778 165 L 856 200 L 861 268 L 802 230 Z" fill="#F5F3FF"/>
+</svg>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEPCAT — Your podcasts, scored.</title>
+<meta name="description" content="HEPCAT is a podcast player with a house band: generative background music that matches your show's vibe and ducks under every word.">
+<meta property="og:title" content="HEPCAT — Your podcasts, scored.">
+<meta property="og:description" content="A podcast player with a house band. Generative music, mixed live under the talk.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --purple: #6D28D9;
+    --deep: #4C1D95;
+    --deeper: #1E0A4A;
+    --lavender: #C4B5FD;
+    --paper: #F5F3FF;
+    --ink: #0A0A0A;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--purple);
+    color: var(--paper);
+    font-family: 'Inter', -apple-system, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  h1, h2, .wordmark {
+    font-family: 'Anton', 'Arial Narrow', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  /* ---- hero ---- */
+  .hero {
+    position: relative;
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 1.5rem 6rem;
+  }
+  /* off-register backing blob, like a misprint */
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 8% 12% 10% 10%;
+    background: var(--deep);
+    clip-path: polygon(6% 12%, 38% 0%, 78% 8%, 100% 42%, 92% 88%, 42% 100%, 4% 82%, 0% 40%);
+    z-index: 0;
+  }
+  .hero > * { position: relative; z-index: 1; }
+  .face { width: min(320px, 60vw); height: auto; margin-bottom: 1rem; }
+  .wordmark {
+    font-size: clamp(4rem, 14vw, 9rem);
+    color: var(--paper);
+    line-height: 1;
+    text-shadow: 6px 6px 0 var(--ink);
+  }
+  .tagline {
+    font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+    color: var(--lavender);
+    font-weight: 600;
+    margin-top: 0.75rem;
+  }
+  .cta-row { margin-top: 2.5rem; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+  .cta {
+    display: inline-block;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 1.15rem;
+    padding: 0.9rem 1.8rem;
+    text-decoration: none;
+    transform: rotate(-1.5deg);
+    transition: transform 120ms ease;
+  }
+  .cta:hover { transform: rotate(0.5deg) scale(1.04); }
+  .cta.primary { background: var(--ink); color: var(--paper); box-shadow: 5px 5px 0 var(--lavender); }
+  .cta.secondary { background: var(--lavender); color: var(--ink); box-shadow: 5px 5px 0 var(--ink); transform: rotate(1deg); }
+  .cta .sub { display: block; font-family: 'Inter', sans-serif; font-size: 0.7rem; text-transform: none; letter-spacing: 0; opacity: 0.7; }
+
+  /* ---- jagged divider ---- */
+  .tear { display: block; width: 100%; height: 70px; }
+
+  /* ---- pitch ---- */
+  .pitch {
+    background: var(--ink);
+    padding: 5rem 1.5rem;
+    text-align: center;
+  }
+  .pitch h2 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    color: var(--paper);
+    max-width: 20ch;
+    margin: 0 auto;
+  }
+  .pitch h2 em { font-style: normal; color: var(--lavender); }
+  .pitch p {
+    max-width: 54ch;
+    margin: 1.5rem auto 0;
+    color: #cfc7e8;
+    font-size: 1.1rem;
+  }
+
+  /* ---- features ---- */
+  .features {
+    background: var(--ink);
+    padding: 1rem 1.5rem 6rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .card {
+    padding: 2rem 1.6rem;
+    background: var(--deep);
+    clip-path: polygon(0 4%, 97% 0, 100% 94%, 3% 100%);
+  }
+  .card:nth-child(2) { background: var(--purple); clip-path: polygon(2% 0, 100% 3%, 98% 100%, 0 96%); }
+  .card:nth-child(3) { background: var(--deeper); clip-path: polygon(0 0, 98% 4%, 100% 100%, 2% 97%); }
+  .card h3 {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    color: var(--lavender);
+    margin-bottom: 0.6rem;
+  }
+  .card p { color: var(--paper); font-size: 1rem; }
+
+  /* ---- footer ---- */
+  footer {
+    background: var(--purple);
+    text-align: center;
+    padding: 3.5rem 1.5rem 3rem;
+    color: var(--lavender);
+    font-size: 0.9rem;
+  }
+  footer a { color: var(--paper); }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <!-- the hepcat -->
+  <svg class="face" viewBox="120 120 800 800" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A jazzy cat with a beret, sunglasses, and goatee">
+    <path d="M 330 400 L 470 340 L 620 355 L 700 450 L 720 610 L 680 780 L 560 880 L 430 870 L 330 760 L 300 570 Z" fill="#0A0A0A"/>
+    <path d="M 240 375 L 350 280 L 540 235 L 690 285 L 715 360 L 560 330 L 380 350 L 265 405 Z" fill="#C4B5FD"/>
+    <path d="M 470 240 L 505 195 L 535 235 L 500 260 Z" fill="#C4B5FD"/>
+    <path d="M 322 505 L 700 468 L 706 528 L 688 610 L 552 622 L 540 560 L 492 566 L 486 628 L 352 640 L 326 560 Z" fill="#F5F3FF"/>
+    <path d="M 360 530 L 480 518 L 472 594 L 368 604 Z" fill="#1E0A4A"/>
+    <path d="M 548 512 L 668 500 L 660 578 L 556 588 Z" fill="#1E0A4A"/>
+    <path d="M 505 770 L 575 760 L 590 800 L 560 862 L 520 868 L 495 815 Z" fill="#C4B5FD"/>
+    <path d="M 470 715 L 590 705 L 592 725 L 472 735 Z" fill="#6D28D9"/>
+    <path d="M 750 170 L 780 162 L 798 395 L 760 402 Z" fill="#F5F3FF"/>
+    <path d="M 722 380 L 790 362 L 808 428 L 745 450 Z" fill="#F5F3FF"/>
+    <path d="M 778 165 L 856 200 L 861 268 L 802 230 Z" fill="#F5F3FF"/>
+  </svg>
+
+  <h1 class="wordmark">Hepcat</h1>
+  <p class="tagline">Your podcasts, scored.</p>
+
+  <div class="cta-row">
+    <a class="cta primary" href="#" aria-disabled="true">App Store<span class="sub">coming soon</span></a>
+    <a class="cta secondary" href="https://github.com/discoveryworks/hepcat">GitHub</a>
+  </div>
+</section>
+
+<!-- jagged tear into the black section -->
+<svg class="tear" viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="background: var(--purple)">
+  <path d="M0,70 L0,38 L160,52 L340,18 L520,44 L710,10 L900,40 L1080,16 L1260,48 L1440,24 L1440,70 Z" fill="#0A0A0A"/>
+</svg>
+
+<section class="pitch">
+  <h2>Half your brain is listening.<br><em>The other half wants music.</em></h2>
+  <p>
+    Podcasts feed the side of you that wants words, ideas, conversation.
+    But the other side sits in silence. HEPCAT is a podcast player with a
+    house band — a live layer of generative music, mixed under the talk,
+    so both sides of your head get what they came for.
+  </p>
+</section>
+
+<section class="features" aria-label="Features">
+  <div class="card">
+    <h3>A real player</h3>
+    <p>Search any public podcast, subscribe, download for offline, play at your speed. Lock screen, background audio, the works. No account, no feed algorithm.</p>
+  </div>
+  <div class="card">
+    <h3>A house band</h3>
+    <p>A generative music layer starts with your episode and matches its energy — ambient for the slow talkers, upbeat for the fast ones. Wrong vibe? Hit <strong>New Vibe</strong> and the band changes tune.</p>
+  </div>
+  <div class="card">
+    <h3>It never talks over anyone</h3>
+    <p>HEPCAT listens to the voices in real time and mixes the music live: swelling into the pauses, sinking under every word. Speech stays crisp. The music stays felt.</p>
+  </div>
+</section>
+
+<!-- jagged tear back to purple -->
+<svg class="tear" viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="background: #0A0A0A">
+  <path d="M0,70 L0,30 L180,48 L360,14 L540,42 L720,8 L920,38 L1100,12 L1280,44 L1440,20 L1440,70 Z" fill="#6D28D9"/>
+</svg>
+
+<footer>
+  <p>HEPCAT — a generative-music-enhanced podcast player.</p>
+  <p style="margin-top: 0.5rem">Built by <a href="https://github.com/discoveryworks">Discovery Works</a>. Icon &amp; site cut from paper, in spirit.</p>
+</footer>
+
+</body>
+</html>
